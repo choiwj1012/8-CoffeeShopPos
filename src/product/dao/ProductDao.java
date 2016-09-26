@@ -1,4 +1,4 @@
-package product.dao;
+package src.product.dao;
 
 public class ProductDao {
 	
