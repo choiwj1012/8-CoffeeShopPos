@@ -3,6 +3,8 @@ package admin.dao;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 
 import admin.vo.Admin;
 import mainController.MainController;
@@ -56,14 +58,51 @@ public class AdminDao {
 
 
 	// 관리자 리스트 정보 
-	public void listView(){
+	public ArrayList<Admin> listView(){
 
+		ArrayList<Admin> adminList = new ArrayList<Admin>();
+		Statement stmt = null;
+		ResultSet rs = null;
+		
+		try {
+			
+			String sql = "select * from admin_list";
+			stmt = MainController.getDbController().getConnection().createStatement();
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()){
+			
+				Admin admin = new Admin();
+				admin.setAdminNumber(rs.getInt(1));
+				admin.setAuthority(rs.getInt(2));
+				admin.setAdminId(rs.getString(3));
+				admin.setAdminPassword(rs.getString(4));
+				admin.setAdminName(rs.getString(5));
+				adminList.add(admin);
+				
+			} 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			if(rs != null){try{rs.close();}catch(SQLException e){e.printStackTrace();}}
+			if(stmt != null){try {stmt.close();} catch (SQLException e) {e.printStackTrace();}}
+		}
+		
+		return adminList;
+		
 	}
 
 
 	// 관리자 정보 수정
-	public void update(){
+	public boolean update(Admin updateAdmin){
 
+		boolean success = false;
+		
+		
+		
+		
+		return success;
 
 	}
 
