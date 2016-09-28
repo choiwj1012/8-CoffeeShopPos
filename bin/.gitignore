@@ -1,5 +1,9 @@
-
-/admin/
 /mainController/
+<<<<<<< HEAD
 /ingredient/
 /login/
+=======
+/main/
+/ingredient/
+/admin/
+>>>>>>> ygeom/ingredient/insert
