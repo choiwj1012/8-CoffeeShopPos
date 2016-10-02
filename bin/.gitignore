@@ -9,7 +9,11 @@
 /mainView/
 /product/
 /productOrder/
+<<<<<<< HEAD
 /productPayment/
 /productPaymentRepository/
 /salesManagement/
 /user/
+=======
+/login/
+>>>>>>> choiwj1012/master
