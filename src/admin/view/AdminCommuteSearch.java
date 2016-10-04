@@ -10,10 +10,10 @@ import mainView.AlertView;
 
 public class AdminCommuteSearch {
 
-
+	// variable
 	private Scanner keyboard;
 
-
+	// constructor
 	public AdminCommuteSearch() {
 
 		keyboard = new Scanner(System.in);
@@ -39,7 +39,7 @@ public class AdminCommuteSearch {
 	//관리자 출퇴근 조회	
 	public void adminCommuteListView(ArrayList<Admin> adminCommuteList) {
 
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd kk:mm:ss");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd a kk:mm:ss");
 
 		if(adminCommuteList.size() == 0){
 

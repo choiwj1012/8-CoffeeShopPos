@@ -224,10 +224,10 @@ public class AdminDao {
 		while(rs.next()) {
 			
 			Admin adminCommute = new Admin();
-			adminCommute.setLoginNumber(rs.getInt("login_number"));
-			adminCommute.setAdminName(rs.getString("admin_name"));
-			adminCommute.setStartTime(rs.getDate("start_time"));
-			adminCommute.setEndTime(rs.getDate("END_TIME"));
+			adminCommute.setLoginNumber(rs.getInt(1));
+			adminCommute.setAdminName(rs.getString(2));
+			adminCommute.setStartTime(rs.getDate(3));
+			adminCommute.setEndTime(rs.getDate(4));
 			adminCommuteLists.add(adminCommute);
 			
 		}
