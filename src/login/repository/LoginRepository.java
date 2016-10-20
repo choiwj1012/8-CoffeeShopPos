@@ -11,7 +11,10 @@ public class LoginRepository {
 	
 	// constructor
 	public LoginRepository() {
-
+		loginAdminId = null;
+		loginAdminPassword = null;
+		authorityNumber = 0;
+		loginNumber = 0;
 	}
 	
 	
